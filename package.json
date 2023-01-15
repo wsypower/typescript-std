@@ -1,0 +1,16 @@
+{
+  "name": "typescript-tsd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "vitest typecheck"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vitest": "^0.27.1"
+  }
+}
