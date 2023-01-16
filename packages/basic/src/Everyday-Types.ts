@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: wsy
+ * @Date: 2023-01-16 12:59:55
+ * @LastEditTime: 2023-01-16 13:10:10
+ * @LastEditors: wsy
+ */
 
 export const s: string = '1'
 export const n: number = 1
@@ -29,3 +36,18 @@ const req: Request = { url: "https://example.com", method: "GET" }
 const a = req.method
 
 handleRequest(req.method);
+
+
+
+// let str: string = "666";
+// str = null
+// str = undefined
+
+
+function doSomething(x: string | null) {
+  if (x === null) {
+    // do nothing
+  } else {
+    console.log("Hello, " + x.toUpperCase());
+  }
+}
