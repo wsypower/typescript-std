@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-16 12:59:55
- * @LastEditTime: 2023-01-16 13:10:10
+ * @LastEditTime: 2023-01-16 14:37:37
  * @LastEditors: wsy
  */
 
@@ -51,3 +51,11 @@ function doSomething(x: string | null) {
     console.log("Hello, " + x.toUpperCase());
   }
 }
+
+let myFavoriteNumber;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
+
+
+const arrayNumber: number[] = [1, 2, 3, 4];
+const greaterThan2: number = arrayNumber.find(num => num > 2) as number; 
