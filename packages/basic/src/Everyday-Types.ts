@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-16 12:59:55
- * @LastEditTime: 2023-01-17 20:14:34
+ * @LastEditTime: 2023-01-16 14:37:37
  * @LastEditors: wsy
  */
 
@@ -59,33 +59,3 @@ myFavoriteNumber = 7;
 
 const arrayNumber: number[] = [1, 2, 3, 4];
 const greaterThan2: number = arrayNumber.find(num => num > 2) as number;
-
-type fun = object
-const afn: fun = () => { }
-
-
-let lowerCaseObject: Object;
-lowerCaseObject = 1; // ts(2322)
-lowerCaseObject = 'a'; // ts(2322)
-lowerCaseObject = true; // ts(2322)
-// @ts-expect-error
-lowerCaseObject = null; // ts(2322)
-// @ts-expect-error
-lowerCaseObject = undefined; // ts(2322)
-lowerCaseObject = {}; // ok
-
-
-let testObject1: Object;
-testObject1 = { a: 1 }
-let testObject2: {}
-testObject2 = { a: 1 }
-
-
-const tmp30: Object = { name: 'linbudu', age: 1 };
-
-type voidFunc = () => void;
-
-
-const v1: voidFunc = function () {
-  return true;
-}
