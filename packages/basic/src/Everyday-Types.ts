@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-16 12:59:55
- * @LastEditTime: 2023-01-16 14:37:37
+ * @LastEditTime: 2023-01-17 16:37:53
  * @LastEditors: wsy
  */
 
@@ -58,4 +58,94 @@ myFavoriteNumber = 7;
 
 
 const arrayNumber: number[] = [1, 2, 3, 4];
-const greaterThan2: number = arrayNumber.find(num => num > 2) as number; 
+const greaterThan2: number = arrayNumber.find(num => num > 2) as number;
+
+
+// function 
+
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+const searchFunc: SearchFunc = function (source: string, subString: string) {
+  return source.search(subString) !== -1;
+}
+
+type IsSubString = (source: string, subString: string) => boolean;
+const isSubString: IsSubString = function (source: string, subString: string) {
+  return source.search(subString) !== -1;
+}
+
+
+interface Desc {
+  description: string;
+  (someArg: number): boolean;
+};
+function otherProperty(fn: Desc) {
+  console.log(fn.description + " returned " + fn(6));
+}
+
+
+function firstElement<Type>(arr: Type[]): Type | undefined {
+  return arr[0];
+}
+
+const s1 = firstElement(["a", "b", "c"]);
+const n1 = firstElement([1, 2, 3]);
+
+function map<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[] {
+  return arr.map(func);
+}
+
+// function map<string, number>(arr: string[], func: (arg: string) => number): number[]
+const parsed = map(["1", "2", "3"], (n) => parseInt(n));
+
+interface s {
+  a: number
+}
+
+type s23 = number[] extends { length: number } ? 1 : 2
+
+
+type s24 = { length: number }
+function minimumLength<Type extends { length: number }>(
+  obj: Type,
+  minimum: number
+): Type {
+  if (obj.length >= minimum) {
+    return obj;
+  } else {
+    // @ts-expect-error
+    return { length: minimum };
+  }
+}
+
+function filter1<Type>(arr: Type[], func: (arg: Type) => boolean): Type[] {
+  return arr.filter(func);
+}
+function filter2<Type, Func extends (arg: Type) => boolean>(
+  arr: Type[],
+  func: Func
+): Type[] {
+  return arr.filter(func);
+}
+
+const az = filter2([1, 2, 3], (n) => n < 3);
+const cz = filter1([1, 2, 3], (n) => n < 3);
+
+
+function buildName(firstName: string, lastName?: string): string {
+  return firstName + ' ' + lastName;
+}
+let tomcat = buildName('Tom', 'Cat');
+let tom = buildName('Tom', undefined);
+
+function myForEach(arr: any[], callback: (arg: any, index: number) => void) {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i], i);
+  }
+}
+
+myForEach([1, 2, 3], (a, i) => {
+
+});
