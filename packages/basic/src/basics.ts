@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-01-15 20:32:36
- * @LastEditTime: 2023-01-25 19:50:12
+ * @LastEditTime: 2023-01-25 20:20:16
  * @LastEditors: wsy
  */
 
@@ -57,3 +57,5 @@ foo = 1
 function foo1(): void {
   return undefined;
 }
+
+const req = { url: "https://example.com", method: "GET" as 'GEt' };
