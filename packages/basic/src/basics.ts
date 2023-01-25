@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-01-15 20:32:36
- * @LastEditTime: 2023-01-15 20:52:36
+ * @LastEditTime: 2023-01-25 19:50:12
  * @LastEditors: wsy
  */
 
@@ -47,3 +47,13 @@ function greet(person, date) {
 
 // @ts-expect-error
 greet("Brendan");
+
+
+let foo: undefined
+// @ts-expect-error
+foo = 1
+
+
+function foo1(): void {
+  return undefined;
+}
