@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-26 18:23:43
- * @LastEditTime: 2023-01-26 19:09:33
+ * @LastEditTime: 2023-01-26 19:39:35
  * @LastEditors: wsy
  */
 interface A {
@@ -47,21 +47,21 @@ const NumberIndex: IndexNameNumber = {
   '1': '1',
   ['2']: '2',
 }
-interface A {
+interface Ac {
   [prop: string]: 0 | 1;
   // @ts-expect-error
   [prop: number]: number; // 编译错误
 }
 
 interface PropertyKeyName {
-  [props: symbol]: number;
-  [props: string]: number;
-  [props: number]: number;
+  [prop: string]: number;
 }
-const aaa = 'a'
 const PropertyKeyName1: PropertyKeyName = {
-  [aaa]: 1
+  'a': 1,
+  [Symbol()]: 2
 }
+
+
 type ccc = typeof PropertyKeyName1
 
 export { }
