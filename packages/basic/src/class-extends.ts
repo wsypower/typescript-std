@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-27 17:04:22
- * @LastEditTime: 2023-01-27 17:10:52
+ * @LastEditTime: 2023-01-27 18:41:54
  * @LastEditors: wsy
  */
 interface Color {
@@ -44,5 +44,72 @@ class Derived extends Base {
   }
 }
 Derived.b()
+
+
+
+class A {
+  foo(): this {
+    return this;
+  }
+}
+
+class B extends A {
+  bar(): this {
+    return this;
+  }
+}
+
+const b = new B();
+const x = b.bar().foo();
+console.log(x);
+
+
+class Thing {
+  _size = 0;
+
+  // 注意这里返回的是 number 类型
+  get size(): number {
+    return this._size;
+  }
+
+  // 注意这里允许传入的是 string | number | boolean 类型
+  set size(value: string | number | boolean) {
+    let num = Number(value);
+
+    // Don't allow NaN, Infinity, etc
+    if (!Number.isFinite(num)) {
+      this._size = 0;
+      return;
+    }
+
+    this._size = num;
+  }
+}
+
+interface Checkable {
+  name: string | number | boolean;
+}
+
+class NameChecker implements Checkable {
+  name!: string | number;
+}
+
+
+class Foo {
+  static #count = 0;
+
+  get count() {
+    return Foo.#count;
+  }
+
+  static {
+    try {
+      console.log(this.#count);
+    }
+    catch { }
+  }
+}
+
+// const f = new Foo()
 
 export { }
