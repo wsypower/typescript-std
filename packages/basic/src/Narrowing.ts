@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-29 19:35:47
- * @LastEditTime: 2023-01-29 19:35:59
+ * @LastEditTime: 2023-01-29 19:57:37
  * @LastEditors: wsy
  */
 interface Triangle {
@@ -34,5 +34,22 @@ function getArea(shape: Shape) {
   }
 }
 
+function example(x: string | number, y: string | boolean) {
+  if (x === y) {
+    x.toLowerCase() // 类型缩小为 string
+    y.toLowerCase() // 类型缩小为 string
+  }
+}
+
+
+interface Container {
+  value: number | null | undefined;
+}
+
+function multiplyValue(container: Container) {
+  if (container.value != null) {
+    container.value // number
+  }
+}
 
 export { }
