@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-27 14:46:36
- * @LastEditTime: 2023-01-27 16:51:22
+ * @LastEditTime: 2023-02-05 17:59:36
  * @LastEditors: wsy
  */
 // class ClassName {
@@ -76,6 +76,33 @@ const circle = new CircleChildren();
 circle.switchColor(); // Color is white
 circle.switchColor(); // Color is black
 
+
+type isEqual<T, U> = T extends U ? (U extends T ? true : false) : false;
+
+class Name {
+  x: number;
+  constructor() {
+    this.x = 0;
+  }
+}
+// 实例类型 Name
+interface MockName {
+  x: number;
+}
+const name: Name = new Name();
+
+interface MockConstructorName {
+  new(): Name;
+}
+
+
+const constructorName: typeof Name = Name
+
+
+
+function instanceNameConstructor(Constructor: typeof Name): Name {
+  return new Constructor();
+}
 
 
 
