@@ -1,0 +1,1 @@
+import cjs = require('./c');

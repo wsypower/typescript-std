@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-01-26 01:06:16
- * @LastEditTime: 2023-01-26 20:31:12
+ * @LastEditTime: 2023-02-07 14:27:02
  * @LastEditors: wsy
  */
 const arr: ReadonlyArray<number> = [1, 2, 3, 4, 5]
@@ -36,6 +36,9 @@ let myObj = { size: 10, label: "Size 10 Object" };
 printLabel(myObj); // OK
 
 
-
+type N = ['ke', 'a']
+type c1 = (number | string)[]
+type c2 = c1[number]
+type c = N[number]
 
 export { }
