@@ -4,9 +4,13 @@ importers:
 
   .:
     specifiers:
+      address: ^1.2.2
+      jQuery: ^1.7.4
       typescript: ^4.9.4
       vitest: ^0.27.1
     devDependencies:
+      address: 1.2.2
+      jQuery: 1.7.4
       typescript: 4.9.4
       vitest: 0.27.1
 
@@ -235,6 +239,11 @@ packages:
     hasBin: true
     dev: true
 
+  /address/1.2.2:
+    resolution: {integrity: sha512-4B/qKCfeE/ODUaAUpSwfzazo5x29WD4r3vXiWsB7I2mSDAihwEqKO+g8GELZUQSSAo5e1XTYh3ZVfLyxBc12nA==}
+    engines: {node: '>= 10.0.0'}
+    dev: true
+
   /assertion-error/1.1.0:
     resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==}
     dev: true
@@ -341,6 +350,12 @@ packages:
     resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
     dependencies:
       has: 1.0.3
+    dev: true
+
+  /jQuery/1.7.4:
+    resolution: {integrity: sha512-hf/hWBnkFhu4FzP96tBjZNPF9qTcUaOKFA8hpVJX0Cb/892JefRzoVGCe/vkmry/pOhZiK6VnQvnuV8CoHf1rA==}
+    engines: {node: '>=0.6'}
+    deprecated: This is deprecated. Please use 'jquery' (all lowercase).
     dev: true
 
   /jsonc-parser/3.2.0:
