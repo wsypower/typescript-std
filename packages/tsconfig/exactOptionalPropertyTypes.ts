@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: wsy
  * @Date: 2023-03-02 19:11:09
- * @LastEditTime: 2023-03-03 19:14:41
+ * @LastEditTime: 2023-03-06 21:25:14
  * @LastEditors: wsy
  */
 interface Foo {
@@ -13,7 +13,7 @@ declare const a: Foo;
 
 a.bar = 'a';
 a.bar = 'b';
-// a.bar = undefined
+a.bar = undefined
 
 
 function test(a: number, b?: number) {
