@@ -12,6 +12,7 @@ type B = 'a' | 'b' | "c"
 
 type C = Complement<A, B> // "d"
 
+type e = string[] | number[] | boolean[]
 
 
 export { }
