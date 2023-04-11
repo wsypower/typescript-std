@@ -9,4 +9,9 @@ type GetWarpValue<T> = T extends WarpString<infer R> ? R : never
 
 type GetWarpResult = GetWarpValue<WarpString<number>>
 
+// First
+type First<T> = T extends [infer R, ...unknown[]] ? R : never
+type FirstResult = First<[number, string, boolean]>
+
+
 export { }
